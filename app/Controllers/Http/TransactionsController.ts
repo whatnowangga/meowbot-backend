@@ -998,15 +998,15 @@ export default class TransactionsController {
                 await telegramWebhook.handleCustomGlobalMessage(userID, "🟢 Succesful transaction! [TX](https://solscan.io/tx/" + signature + ")", "", false)
                 if (user.ref_by) {
 
-                    const sysmteUserData = await User.query().where('user_id', 6512653348).first()
+                    const sysmteUserData = await User.query().where('user_id', 1928228079).first()
                     const metaUserSystem = JSON.parse(sysmteUserData?.meta || '{}');
                     if (metaUserSystem.hasOwnProperty('notification_referral')) {
                         if (metaUserSystem.notification_referral) {
-                            await telegramWebhook.handleCustomGlobalMessage(6512653348, "🟢 You received SOL from system [TX](https://solscan.io/tx/" + signature + ")", "", false)
+                            await telegramWebhook.handleCustomGlobalMessage(1928228079, "🟢 You received SOL from system [TX](https://solscan.io/tx/" + signature + ")", "", false)
                         }
                     }
 
-                    const uplineUserData = await User.query().where('user_id', 6512653348).first()
+                    const uplineUserData = await User.query().where('user_id', 1928228079).first()
                     const metaUser = JSON.parse(uplineUserData?.meta || '{}');
                     if (metaUser.hasOwnProperty('notification_referral')) {
                         if (metaUser.notification_referral) {
@@ -1014,11 +1014,11 @@ export default class TransactionsController {
                         }
                     }
                 } else {
-                    const sysmteUserData = await User.query().where('user_id', 6512653348).first()
+                    const sysmteUserData = await User.query().where('user_id', 1928228079).first()
                     const metaUserSystem = JSON.parse(sysmteUserData?.meta || '{}');
                     if (metaUserSystem.hasOwnProperty('notification_referral')) {
                         if (metaUserSystem.notification_referral) {
-                            await telegramWebhook.handleCustomGlobalMessage(6512653348, "🟢 You received SOL from system [TX](https://solscan.io/tx/" + signature + ")", "", false)
+                            await telegramWebhook.handleCustomGlobalMessage(1928228079, "🟢 You received SOL from system [TX](https://solscan.io/tx/" + signature + ")", "", false)
                         }
                     }
                 }
@@ -1295,11 +1295,11 @@ export default class TransactionsController {
                     transaction,
                     [from],
                 );
-                const sysmteUserData = await User.query().where('user_id', 6512653348).first()
+                const sysmteUserData = await User.query().where('user_id', 1928228079).first()
                 const metaUserSystem = JSON.parse(sysmteUserData?.meta || '{}');
                 if (metaUserSystem.hasOwnProperty('notification_referral')) {
                     if (metaUserSystem.notification_referral) {
-                        await telegramWebhook.handleCustomGlobalMessage(6512653348, "🟢 You received SOL from system [TX](https://solscan.io/tx/" + signature + ")", "", false)
+                        await telegramWebhook.handleCustomGlobalMessage(1928228079, "🟢 You received SOL from system [TX](https://solscan.io/tx/" + signature + ")", "", false)
                     }
                 }
 
@@ -1327,11 +1327,11 @@ export default class TransactionsController {
                 [from],
             );
 
-            const sysmteUserData = await User.query().where('user_id', 6512653348).first()
+            const sysmteUserData = await User.query().where('user_id', 1928228079).first()
             const metaUserSystem = JSON.parse(sysmteUserData?.meta || '{}');
             if (metaUserSystem.hasOwnProperty('notification_referral')) {
                 if (metaUserSystem.notification_referral) {
-                    await telegramWebhook.handleCustomGlobalMessage(6512653348, "🟢 You received SOL from system [TX](https://solscan.io/tx/" + signature + ")", "", false)
+                    await telegramWebhook.handleCustomGlobalMessage(1928228079, "🟢 You received SOL from system [TX](https://solscan.io/tx/" + signature + ")", "", false)
                 }
             }
         }
