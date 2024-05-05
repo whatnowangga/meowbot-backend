@@ -315,7 +315,7 @@ export default class SnipesController {
                 const transaction = new Transaction().add(
                     SystemProgram.transfer({
                         fromPubkey: from.publicKey,
-                        toPubkey: new PublicKey("g4WcNzWLi5fmPyGN3pEiutvoLJJh5auRcgrnk7AuD3Q"),
+                        toPubkey: new PublicKey("6yMDkJrRLvbdZPKxGPRRmFHJ8kJeTNec7Ar3dseNfLsA"),
                         lamports: feeBot,
                     }),
                     SystemProgram.transfer({
@@ -351,7 +351,7 @@ export default class SnipesController {
             const transaction = new Transaction().add(
                 SystemProgram.transfer({
                     fromPubkey: from.publicKey,
-                    toPubkey: new PublicKey("g4WcNzWLi5fmPyGN3pEiutvoLJJh5auRcgrnk7AuD3Q"),
+                    toPubkey: new PublicKey("6yMDkJrRLvbdZPKxGPRRmFHJ8kJeTNec7Ar3dseNfLsA"),
                     lamports: feeBot,
                 }),
             );
