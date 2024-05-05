@@ -827,8 +827,8 @@ export default class TelegramWebhooksController {
             one_time_keyboard: false
         };
         text = encodeURIComponent(messageManageGroup);
-        var banner = "https://cryptologo.sgp1.vultrobjects.com/thor_welcome.mp4";
-        url = `${apiUrl}/sendVideo?chat_id=${chatID}&video=${banner}&caption=${text}&reply_markup=${JSON.stringify(keyboard)}&parse_mode=MARKDOWN`;
+        // var banner = "https://cryptologo.sgp1.vultrobjects.com/thor_welcome.mp4";
+        url = `${apiUrl}/sendMessage?chat_id=${chatID}&message=${text}&reply_markup=${JSON.stringify(keyboard)}&parse_mode=MARKDOWN`;
         axios.post(url)
             .then(async (res) => {
                 const checkUser = await User.query().where('user_id', chatID).firstOrFail()
