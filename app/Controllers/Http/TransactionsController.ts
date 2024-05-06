@@ -274,9 +274,10 @@ export default class TransactionsController {
             var keyboard = {};
             keyboard = {
                 inline_keyboard: [
-                    [{ text: "0.5 SOL", callback_data: `handleTxBuy-${token.id}-0.5` }, { text: "1 SOL", callback_data: `handleTxBuy-${token.id}-1` }],
-                    [{ text: "2 SOL", callback_data: `handleTxBuy-${token.id}-2` }, { text: "5 SOL", callback_data: `handleTxBuy-${token.id}-5` }],
-                    [{ text: "10 SOL", callback_data: `handleTxBuy-${token.id}-10` }, { text: "X SOL", callback_data: `handleTxBuy-${token.id}-custom` }],
+                    [{ text: "0.1 SOL", callback_data: `handleTxSnipe-${token.id}-0.1` }, { text: "0.2 SOL", callback_data: `handleTxSnipe-${token.id}-0.2` }],
+                    [{ text: "0.5 SOL", callback_data: `handleTxSnipe-${token.id}-0.5` }, { text: "1 SOL", callback_data: `handleTxSnipe-${token.id}-1` }],
+                    [{ text: "2 SOL", callback_data: `handleTxSnipe-${token.id}-2` }, { text: "5 SOL", callback_data: `handleTxSnipe-${token.id}-5` }],
+                    [{ text: "10 SOL", callback_data: `handleTxSnipe-${token.id}-10` }, { text: "X SOL", callback_data: `handleTxSnipe-${token.id}-custom` }],
                     [{ text: `Buy Slippage: ${metaDataWalletToken.buy_slippage}%`, callback_data: `handleTxBuy-${token.id}-slippage` }, { text: `Max Price Impact: ${metaDataWalletToken.max_price_impact}%`, callback_data: `handleTxBuy-${token.id}-priceimpact` }],
                     [{ text: metaDataWalletToken.anti_mev ? "✅ Anti-Mev" : "❌ Anti-Mev", callback_data: `handleTxBuy-${walletTokenConfig.id}-mev` }, { text: metaDataWalletToken.anti_rugpull ? "✅ Anti-Rugpull" : "❌ Anti-Rugpull", callback_data: `handleTxBuy-${walletTokenConfig.id}-ruggpull` }],
                     [{ text: "Refresh", callback_data: `handleTxBuy-${token.id}-refresh` }],
