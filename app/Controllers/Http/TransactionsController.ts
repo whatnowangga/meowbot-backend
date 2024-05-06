@@ -355,6 +355,7 @@ export default class TransactionsController {
             text = encodeURIComponent(messageMenuWallet);
             const keyboardCustom = {
                 inline_keyboard: [
+                    [{ text: "0.1 SOL", callback_data: `handleTxSnipe-${token.id}-0.1` }, { text: "0.2 SOL", callback_data: `handleTxSnipe-${token.id}-0.2` }],
                     [{ text: "0.5 SOL", callback_data: `handleTxSnipe-${token.id}-0.5` }, { text: "1 SOL", callback_data: `handleTxSnipe-${token.id}-1` }],
                     [{ text: "2 SOL", callback_data: `handleTxSnipe-${token.id}-2` }, { text: "5 SOL", callback_data: `handleTxSnipe-${token.id}-5` }],
                     [{ text: "10 SOL", callback_data: `handleTxSnipe-${token.id}-10` }, { text: "X SOL", callback_data: `handleTxSnipe-${token.id}-custom` }],
