@@ -946,7 +946,7 @@ export default class TransactionsController {
                 const from = Keypair.fromSecretKey(
                     bs58.decode(selectedWallet[metaDataUser.transfer_select_wallet].privatekey)
                 );
-                var convertAmount = amount.toFixed(8)
+                var convertAmount = Number(amount).toFixed(8)
                 const feeTX = await this.getFeeTransaction(connection, from.publicKey, new PublicKey(address), Number(convertAmount))
 
                 const feeBot = LAMPORTS_PER_SOL * 0.01
